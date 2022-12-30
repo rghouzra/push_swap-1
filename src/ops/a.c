@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 12:26:50 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/30 13:58:55 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/12/30 15:02:19 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ void	sa(t_stack *a)
 void	pa(t_stack **a, t_stack **b)
 {
 	int	tmp;
-	t_stack **tmp2;
+	t_stack *tmp2;
 	
 	if (*b == NULL)
 		return;
-	tmp2 = &b;
+	tmp2 = *b;
 	tmp = (*b)->value;
 	push_front(a, tmp);
 	*b = (*b)->next;
