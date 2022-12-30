@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:26:31 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/30 14:57:06 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/12/30 18:43:48 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,21 @@ int main (int ac, char *av[])
 	int	i;
 
 	i = 1;
+	b = NULL;
 	while (av[i] && i < ac)
 	{
 		ft_stkadd(&a, ft_atoi(av[i]));
-		ft_stkadd(&b, ft_atoi(av[i]) * 2);
 		i++;
 	}
-	pa(&a, &b);
-	while (1);
-	
-	
+	i = 0;
+	while (i < 3)
+	{
+		ft_printf("\na: ");
+		ft_stkprint(a);
+		ft_printf("\nb: ");
+		ft_stkprint(b);
+		rra(&a);
+		i++;
+	}
+	return (0);
 }

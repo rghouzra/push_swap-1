@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:24:49 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/29 20:05:10 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/12/30 16:14:49 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ void	ft_stkadd(t_stack **ptr, int num)
 	else
 	{
 		lst = ft_stklast(*ptr);
-		if (!lst)
-			return ;
 		lst->next = new;
 	}
 }
