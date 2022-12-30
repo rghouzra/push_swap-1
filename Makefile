@@ -1,6 +1,6 @@
 NAME        := push_swap
 CC        := cc
-FLAGS    := -Wall -Wextra -Werror -I inc
+FLAGS    := -Wall -Wextra -Werror -I inc -g
 
 SRCS        :=      push_swap.c \
                           src/libft/ft_atoi.c \
@@ -45,6 +45,10 @@ SRCS        :=      push_swap.c \
                           src/printf/ft_putnbr_u.c \
                           src/printf/ft_putstr.c \
                           src/stack/init.c \
+                          src/stack/hlpr.c \
+                          src/ops/a.c \
+                          src/ops/b.c \
+                          src/ops/ab.c \
                           
 OBJS        := $(SRCS:.c=.o)
 
