@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:39:08 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/31 17:10:21 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/12/31 17:22:05 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ void	rrb(t_stack **b, int fd);
 void	rrr(t_stack **a, t_stack **b);
 // parsing.init
 char    **convert_text(char **args);
+void	add_stack(t_stack **stk, char **args);
 #endif

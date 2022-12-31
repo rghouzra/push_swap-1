@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hlpr.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 13:40:52 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/30 16:19:14 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/12/31 17:24:31 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ void	ft_stkprint(t_stack *head)
 	tmp = head;
 	while (tmp && tmp->next)
 	{
-		ft_printf("%d ", tmp->value);
+		ft_printf("%d\n", tmp->value);
 		tmp = tmp->next;
 	}
-	ft_printf("%d ", tmp->value);
+	ft_printf("%d", tmp->value);
 }
