@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:26:31 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/30 18:43:48 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/12/31 17:17:17 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,15 @@
 
 int main (int ac, char *av[])
 {
-	t_stack	*a;
-	t_stack *b;
-	int	i;
+	(void) ac;
+	char **tmp;
 
-	i = 1;
-	b = NULL;
-	while (av[i] && i < ac)
+	tmp = convert_text(av);
+	while (*tmp)
 	{
-		ft_stkadd(&a, ft_atoi(av[i]));
-		i++;
-	}
-	i = 0;
-	while (i < 3)
-	{
-		ft_printf("\na: ");
-		ft_stkprint(a);
-		ft_printf("\nb: ");
-		ft_stkprint(b);
-		rra(&a);
-		i++;
+		ft_printf("%s\n", *tmp);
+		free(*tmp);
+		tmp++;
 	}
 	return (0);
 }

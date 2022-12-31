@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ab.c                                               :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 12:55:23 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/31 13:48:52 by aarbaoui         ###   ########.fr       */
+/*   Created: 2022/12/31 15:00:23 by aarbaoui          #+#    #+#             */
+/*   Updated: 2022/12/31 17:17:59 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ss(t_stack **a, t_stack **b)
+char    **convert_text(char **args)
 {
-	sa(a, 0);
-	sb(b, 0);
-	ft_printf("ss\n");
+	char	**res;
+	char	*tmp;
+	char	*tmp1;
+	int		i;
+
+	i = 1;
+	tmp1 = ft_strdup("");
+	while (args[i])
+	{
+		tmp = ft_strjoin(tmp1, args[i]);
+		free(tmp1);
+		tmp1 = ft_strjoin(tmp, " ");
+		free(tmp);
+		i++;
+	}
+	res = ft_split(tmp1, ' ');
+	free(tmp1);
+	return (res);
 }
 
-void	rr(t_stack **a, t_stack **b)
-{
-	ra(a, 0);
-	rb(b, 0);
-	ft_printf("rr\n");
-}
 
-void	rrr(t_stack **a, t_stack **b)
-{
-	rra(a, 0);
-	rrb(b, 0);
-	ft_printf("rrr\n");
-}
