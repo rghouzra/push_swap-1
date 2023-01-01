@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:24:49 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/30 16:14:49 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/01 18:34:31 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,37 @@ t_stack	*ft_stklast(t_stack *stk)
 	return (ptr);
 }
 
+static void	ft_gibindex(t_stack **stk, t_stack **new)
+{
+	t_stack	*ptr;
+	t_stack	*tmp;
+	t_stack *tmp1;
+
+	tmp1 = *stk;
+	ptr = *stk;
+	tmp = *new;
+	while (ptr)
+	{
+		if (ptr->value < tmp->value)
+			tmp->index++;
+		else if (ptr->value > tmp->value)
+			ptr->index++;
+		ptr = ptr->next;
+	}
+	*new = tmp;
+	*stk = tmp1;
+}
+
 void	ft_stkadd(t_stack **ptr, int num)
 {
 	t_stack	*new;
 	t_stack *lst;
 
-	new = (t_stack *)malloc(sizeof(t_stack));
+	new = (t_stack *)ft_calloc(1, sizeof(t_stack));
 	if (!new)
 		return ;
 	new->value = num;
+	ft_gibindex(ptr, &new);
 	new->next = NULL;
 	if (!*ptr)
 		*ptr = new;

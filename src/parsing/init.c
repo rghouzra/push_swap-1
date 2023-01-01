@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 15:00:23 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/01 16:54:51 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/01 17:10:48 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,29 @@ char    **convert_text(char **args)
 	return (res);
 }
 
+void	is_allint(char **av)
+{
+	int i;
+	int j;
+	
+	i = 0;
+	j = 0;
+	while (av[i])
+	{
+		j = 0;
+		while (av[i][j])
+		{
+			if (!ft_isdigit(av[i][j]) && av[i][j] != '-')
+			{
+				ft_printf("Error: Invalid arguments");
+				exit(1);	
+			}
+			j++;
+		}
+		i++;
+	}
+}
+
 void	add_stack(t_stack **stk, char **args)
 {
 	char	**da;
@@ -41,6 +64,7 @@ void	add_stack(t_stack **stk, char **args)
 
 	i = 0;
 	da = convert_text(args);
+	is_allint(da);
 	while (da[i])
 	{
 		ft_stkadd(stk, ft_atoi(da[i]));
