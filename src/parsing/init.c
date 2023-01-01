@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 15:00:23 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/31 17:24:25 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:54:51 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	add_stack(t_stack **stk, char **args)
 	while (da[i])
 	{
 		ft_stkadd(stk, ft_atoi(da[i]));
+		free(da[i]);
 		i++;
 	}
+	free(da);
 }

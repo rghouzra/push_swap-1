@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/26 18:26:31 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/01 16:57:50 by aarbaoui         ###   ########.fr       */
+/*   Created: 2022/12/31 19:07:06 by aarbaoui          #+#    #+#             */
+/*   Updated: 2022/12/31 19:10:19 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main (int ac, char *av[])
+int is_sorted(t_stack *stk)
 {
-	(void) ac;
-	t_stack *a;
-
-	add_stack(&a, av);
-	ft_printf("is : %d\n", is_sorted(a));
-	ft_stkprint(a);
-	sa(&a, 1);
-	ft_printf("is : %d\n", is_sorted(a));
-	return (0);
+    t_stack *tmp;
+    
+    tmp = stk;
+    while (tmp->next)
+    {
+        if (tmp->value >= tmp->next->value)
+            return (0);
+        tmp = tmp->next;
+    }
+    return (1);
 }

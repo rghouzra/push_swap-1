@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:39:08 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/31 17:22:05 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2022/12/31 19:08:31 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	ft_stkadd(t_stack **ptr, int new);
 //stack.hlpr
 void	push_front(t_stack **head, int val);
 void	ft_stkprint(t_stack *head);
+//stack.checks
+int		is_sorted(t_stack *stk);
 // ops
 void	sa(t_stack **a, int fd);
 void	sb(t_stack **b, int fd);
