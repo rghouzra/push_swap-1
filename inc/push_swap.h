@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:39:08 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/31 19:08:31 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/03 19:10:27 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,9 @@ void	rrr(t_stack **a, t_stack **b);
 // parsing.init
 char    **convert_text(char **args);
 void	add_stack(t_stack **stk, char **args);
+//sorting
+void	sort_two(t_stack **a);
+void    sort_three(t_stack **a);
+void    sort_four(t_stack **a, t_stack **b);
+void    sort_five(t_stack **a, t_stack **b);
 #endif

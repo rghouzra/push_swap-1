@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:24:49 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/01 18:34:31 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/03 15:16:34 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,12 @@ static void	ft_gibindex(t_stack **stk, t_stack **new)
 			tmp->index++;
 		else if (ptr->value > tmp->value)
 			ptr->index++;
+		else if (ptr->value == tmp->value)
+		{
+			ft_printf("Error: Duplicated numbers.\n");
+			exit(1);
+		}
+			
 		ptr = ptr->next;
 	}
 	*new = tmp;

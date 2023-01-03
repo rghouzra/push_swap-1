@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   a.c                                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 12:26:50 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/31 13:46:12 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/03 17:11:30 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,5 @@ void	rra(t_stack **a, int fd)
 	tmp2->next = *a;
 	*a = tmp2;
 	if (fd)
-		ft_printf("rra");
+		ft_printf("rra\n");
 }
