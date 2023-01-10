@@ -6,27 +6,25 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:12:36 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/10 14:06:54 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:11:41 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int find_index(t_stack **stk, int val)
+int find_index(t_stack *stk, int val)
 {
-	t_stack *tmp;
-	int		i;
+	int	i;
 
 	i = 0;
-	tmp = *stk;
-	while (tmp)
+	while (stk)
 	{
-		if (tmp->index == val)
-			break ;
+		if (stk->index == val)
+			return (i);
 		i++;
-		tmp = tmp->next;
+		stk = stk->next;
 	}
-	return (i);
+	return (-1);
 }
 
 // int calc_dis(int fbig, int sbig)

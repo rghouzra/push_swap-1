@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:39:08 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/08 18:50:20 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:12:05 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,5 @@ void    push_chunks(t_stack **a, t_stack **b, int chunk, int max);
 void    sort_init(t_stack **a, t_stack **b, int d);
 void	sort_chunks(t_stack **a,t_stack **b);
 // sorting.hlpr
-int		find_index(t_stack **a, int val);
+int		find_index(t_stack *stk, int val);
 #endif

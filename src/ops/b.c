@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 12:54:29 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/03 15:16:42 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:23:11 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,5 @@ void	rrb(t_stack **b, int fd)
 	tmp2->next = *b;
 	*b = tmp2;
 	if (fd)
-		ft_printf("rra");
+		ft_printf("rrb\n");
 }

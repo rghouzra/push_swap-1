@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 18:49:19 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/08 16:14:27 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:24:24 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void sort_four(t_stack **a, t_stack **b)
 		}
 		tmp1 = tmp1->next;
 	}
-	i = find_index(a, min);
+	i = find_index(*a, min);
 	ft_norm(a, b, i);
 	sort_three(a);
 	pa(a, b);
@@ -97,7 +97,7 @@ void	sort_five(t_stack **a, t_stack **b)
 		}
 		tmp1 = tmp1->next;
 	}
-	i = find_index(a, min);
+	i = find_index(*a, min);
 	ft_norm(a, b, i);
 	sort_four(a, b);
 	pa(a, b);

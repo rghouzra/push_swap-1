@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:14:32 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/10 14:06:31 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/10 14:34:08 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,22 @@ static	int get_dis(t_stack *ptr, int index)
 	if (index < ft_stklen(ptr) - index)
 		return (index);
 	return (ft_stklen(ptr) - index);
+}
+
+static void	testing(t_stack **b)
+{
+	int len = ft_stklen(*b) - 1;
+	int dis =  get_dis(*b, find_index(*b, len));
+	ft_printf("\n\n\n\n");
+	ft_stkprint(*b);
+	ft_printf("\n\n\n\n");
+	while (dis > 0)
+	{
+		if ()
+		rrb(b, 1);
+		dis--;
+	}
+	ft_stkprint(*b);
 }
 
 void    sort_init(t_stack **a, t_stack **b, int d)
@@ -35,7 +51,7 @@ void    sort_init(t_stack **a, t_stack **b, int d)
 			break ;
 		max += chunk;
 	}
-	ft_printf("%d", get_dis(*b, find_index(b, ft_stklen(*b) - 1)));
+	testing(b);
 }
 
 void    push_chunks(t_stack **a, t_stack **b, int chunk, int max)
@@ -62,3 +78,4 @@ void    push_chunks(t_stack **a, t_stack **b, int chunk, int max)
 			ra(a, 1);
 	}
 }
+
