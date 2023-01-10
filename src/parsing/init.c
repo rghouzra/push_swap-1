@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aarbaoui <aarbaoui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 15:00:23 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/01 17:10:48 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/03 20:00:33 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	is_allint(char **av)
 	}
 }
 
-void	add_stack(t_stack **stk, char **args)
+void	add_stack(t_stack **stk, char **args, int *slen)
 {
 	char	**da;
 	int		i;
@@ -71,5 +71,6 @@ void	add_stack(t_stack **stk, char **args)
 		free(da[i]);
 		i++;
 	}
+	*slen = i;
 	free(da);
 }

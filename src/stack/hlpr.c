@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 13:40:52 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/03 17:14:15 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/08 18:36:58 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,28 @@ void	ft_stkprint(t_stack *head)
 	while (tmp && tmp->next)
 	{
 		ft_printf("value: %d\n", tmp->value);
-		// ft_printf("index: %d\n", tmp->index);
 		tmp = tmp->next;
 	}
 	ft_printf("value: %d\n", tmp->value);
-	// ft_printf("index: %d\n", tmp->index);
 }
+
+
+int	ft_stklen(t_stack *head)
+{
+	t_stack *ptr;
+	int		i;
+
+	i = 0;
+	if (!head)
+		return (0);
+	ptr = head;
+	if (ptr == NULL)
+		return (0);
+	while (ptr)
+	{
+		ptr = ptr->next;
+		i++;
+	}
+	return (i);
+}
+

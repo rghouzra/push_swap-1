@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 12:26:50 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/03 17:11:30 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/04 15:08:13 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	sa(t_stack **a, int fd)
 {
-	int	tmp;
+	int tmp;
 	t_stack *tmp2;
 
 	if (*a == NULL || (*a)->next == NULL)
@@ -22,10 +22,13 @@ void	sa(t_stack **a, int fd)
 	tmp2 = *a;
 	tmp = (*a)->value;
 	(*a)->value = (*a)->next->value;
+	(*a)->index = (*a)->next->index;
 	(*a)->next->value = tmp;
+	(*a)->next->index = tmp2->index;
 	if (fd)
 		ft_printf("sa\n");
 }
+
 
 void	pa(t_stack **a, t_stack **b)
 {

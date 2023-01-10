@@ -52,6 +52,8 @@ SRCS        :=      push_swap.c \
                           src/ops/ab.c \
                           src/parsing/init.c \
                           src/sorting/init.c \
+                          src/sorting/algo.c \
+                          src/sorting/htpr.c \
                           
 OBJS        := $(SRCS:.c=.o)
 
