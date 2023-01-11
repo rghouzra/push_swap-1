@@ -6,16 +6,14 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:39:08 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 14:52:41 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 15:38:10 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# include <stdio.h>
 # include "libft.h"
 # include "ft_printf.h"
-# include "debuh.h"
 # define THUNDO 5
 # define OHUNDO 10
 

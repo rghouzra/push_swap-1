@@ -1,0 +1,23 @@
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
+
+char *gnl(int fd) 
+{
+    char *string = malloc(10000), *copy = string;
+    while (read(fd, copy, 1) > 0 && *copy++ != '\n');
+    return (copy > string) ? (*copy = 0, string) : (free(string), NULL);
+}
+
+int main(void)
+{
+    int fd = open("vis.py", O_RDONLY);
+    char *f;
+
+    while (f = gnl(fd))
+    {
+        printf("%s", f);
+        free(f);
+    }
+    system("leaks a.out");
+}
