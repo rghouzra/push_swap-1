@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:12:36 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 12:43:42 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 13:47:18 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void	push_two_top(t_stack **a, t_stack **b, int *index, int i)
 	push_top(b, *index - 1, i);
 	pa(a, b);
 	j = find_index(*a, *index);
-	push_top(b, *index, i);
+	push_top(b, *index, j);
+	(*index)--;
 	pa(a, b);
 	sa(a, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:14:32 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 12:44:11 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 13:13:42 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	sort_chunks(t_stack **a, t_stack **b)
 		index--;
 		fbig = find_index(*b, index);
 		sbig = find_index(*b, index - 1);
-		if (index == 0 || get_dis(*b, fbig) > get_dis(*b, sbig))
+		if (index == 0 || get_dis(*b, fbig) < get_dis(*b, sbig))
 		{
 			push_top(b, index, fbig);
 			pa(a, b);

@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:26:31 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/08 13:30:47 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 13:49:10 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ int main (int ac, char *av[])
 		add_stack(&a, av, &slen);
 		do_stack(&a, &b, slen);
 	}
+	// ft_stkprint(a);
 	return (0);
 }
