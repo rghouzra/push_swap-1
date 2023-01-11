@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:24:49 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/10 13:59:10 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 16:19:52 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	ft_gibindex(t_stack **stk, t_stack **new)
 {
 	t_stack	*ptr;
 	t_stack	*tmp;
-	t_stack *tmp1;
+	t_stack	*tmp1;
 
 	tmp1 = *stk;
 	ptr = *stk;
@@ -44,7 +44,6 @@ static void	ft_gibindex(t_stack **stk, t_stack **new)
 			ft_printf("Error: Duplicated numbers.\n");
 			exit(1);
 		}
-			
 		ptr = ptr->next;
 	}
 	*new = tmp;
@@ -54,7 +53,7 @@ static void	ft_gibindex(t_stack **stk, t_stack **new)
 void	ft_stkadd(t_stack **ptr, int num)
 {
 	t_stack	*new;
-	t_stack *lst;
+	t_stack	*lst;
 
 	new = (t_stack *)ft_calloc(1, sizeof(t_stack));
 	if (!new)

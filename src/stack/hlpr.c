@@ -14,7 +14,7 @@
 
 void	push_front(t_stack **head, int val, int index)
 {
-	t_stack *new_node;
+	t_stack	*new_node;
 
 	new_node = (t_stack *)malloc(sizeof(t_stack));
 	new_node->value = val;
@@ -25,7 +25,7 @@ void	push_front(t_stack **head, int val, int index)
 
 void	ft_stkprint(t_stack *head)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (!head)
 		return ;
@@ -38,10 +38,9 @@ void	ft_stkprint(t_stack *head)
 	ft_printf("value: %d == index: %d\n", tmp->value, tmp->index);
 }
 
-
 int	ft_stklen(t_stack *head)
 {
-	t_stack *ptr;
+	t_stack	*ptr;
 	int		i;
 
 	i = 0;
@@ -57,4 +56,3 @@ int	ft_stklen(t_stack *head)
 	}
 	return (i);
 }
-

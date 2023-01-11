@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		len;
 	int		neg;
-	
+
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	neg = ft_isneg(n);

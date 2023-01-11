@@ -6,13 +6,13 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 15:00:23 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/03 20:00:33 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 16:17:49 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char    **convert_text(char **args)
+char	**convert_text(char **args)
 {
 	char	**res;
 	char	*tmp;
@@ -36,9 +36,9 @@ char    **convert_text(char **args)
 
 void	is_allint(char **av)
 {
-	int i;
-	int j;
-	
+	int	i;
+	int	j;
+
 	i = 0;
 	j = 0;
 	while (av[i])
@@ -49,7 +49,7 @@ void	is_allint(char **av)
 			if (!ft_isdigit(av[i][j]) && av[i][j] != '-')
 			{
 				ft_printf("Error: Invalid arguments");
-				exit(1);	
+				exit(1);
 			}
 			j++;
 		}

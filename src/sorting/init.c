@@ -6,18 +6,18 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 18:49:19 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/10 14:24:24 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 16:19:42 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    sort_three(t_stack **a)
+void	sort_three(t_stack **a)
 {
-	t_stack *ptr;
-	int     f;
-	int     s;
-	int     t;
+	t_stack	*ptr;
+	int		f;
+	int		s;
+	int		t;
 
 	ptr = *a;
 	f = ptr->index;
@@ -32,8 +32,8 @@ void    sort_three(t_stack **a)
 		ra(a, 1);
 	else if (f < s && s > t && f < t)
 	{
-			sa(a, 1);
-			ra(a, 1);
+		sa(a, 1);
+		ra(a, 1);
 	}
 	else if (f < s && s > t && f > t)
 		rra(a, 1);
@@ -41,21 +41,19 @@ void    sort_three(t_stack **a)
 		sa(a, 1);
 }
 
-
-
 static void	ft_norm(t_stack **a, t_stack **b, int i)
 {
 	while (i-- > 0)
-		ra(a, 1);	
+		ra(a, 1);
 	pb(a, b);
 }
 
-void sort_four(t_stack **a, t_stack **b)
+void	sort_four(t_stack **a, t_stack **b)
 {
-	t_stack *tmp1;
-	t_stack *tmp2;
-	int i;
-	int min;
+	t_stack	*tmp1;
+	t_stack	*tmp2;
+	int		i;
+	int		min;
 
 	tmp1 = *a;
 	tmp2 = *a;
@@ -80,10 +78,10 @@ void sort_four(t_stack **a, t_stack **b)
 void	sort_five(t_stack **a, t_stack **b)
 {
 	t_stack	*tmp1;
-	t_stack *tmp2;
+	t_stack	*tmp2;
 	int		i;
 	int		min;
-	
+
 	i = 0;
 	tmp1 = *a;
 	tmp2 = *a;

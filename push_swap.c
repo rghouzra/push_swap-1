@@ -36,12 +36,12 @@ void	do_stack(t_stack **a, t_stack **b, int len)
 		sort_init(a, b, 10);
 }
 
-int main (int ac, char *av[])
+int	main(int ac, char *av[])
 {
-	t_stack *a;
-	t_stack *b;
+	t_stack	*a;
+	t_stack	*b;
 	int		slen;
-	
+
 	a = NULL;
 	b = NULL;
 	if (ac > 2)

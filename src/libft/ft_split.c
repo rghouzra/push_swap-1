@@ -24,10 +24,10 @@ static void	ft_freeall(char **str, int i)
 
 static int	ft_count(char const *s, char c)
 {
-	size_t		i;
-	size_t		k;
-	size_t		len;
-	int			count;
+	size_t	i;
+	size_t	k;
+	size_t	len;
+	int		count;
 
 	i = 0;
 	count = 0;

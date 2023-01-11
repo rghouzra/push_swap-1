@@ -14,11 +14,11 @@
 
 void	sb(t_stack **b, int fd)
 {
-	int	tmp;
-	t_stack *tmp2;
+	int		tmp;
+	t_stack	*tmp2;
 
 	if (*b == NULL || (*b)->next == NULL)
-		return;
+		return ;
 	tmp2 = *b;
 	tmp = (*b)->value;
 	(*b)->value = (*b)->next->value;
@@ -29,12 +29,12 @@ void	sb(t_stack **b, int fd)
 
 void	pb(t_stack **a, t_stack **b)
 {
-	int	tmpv;
-	int tmpi;
-	t_stack *tmp2;
-	
+	int		tmpv;
+	int		tmpi;
+	t_stack	*tmp2;
+
 	if (*a == NULL)
-		return;
+		return ;
 	tmp2 = *a;
 	tmpv = (*a)->value;
 	tmpi = (*a)->index;
@@ -46,8 +46,8 @@ void	pb(t_stack **a, t_stack **b)
 
 void	rb(t_stack **b, int fd)
 {
-	t_stack *tmp1;
-	t_stack *tmp2;
+	t_stack	*tmp1;
+	t_stack	*tmp2;
 
 	if (!*b || !(*b)->next)
 		return ;
@@ -63,8 +63,8 @@ void	rb(t_stack **b, int fd)
 void	rrb(t_stack **b, int fd)
 {
 	t_stack	*tmp1;
-	t_stack *tmp2;
-	
+	t_stack	*tmp2;
+
 	if (!*b)
 		return ;
 	tmp1 = *b;

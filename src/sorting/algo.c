@@ -6,33 +6,17 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:14:32 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 14:56:33 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 16:18:22 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-// static void	testing(t_stack **b)
-// {
-// 	int len = ft_stklen(*b) - 1;
-// 	int dis = get_dis(*b, find_index(*b, len));
-// 	int i1 = find_index(*b, 99);
-// 	if (i1 > ft_stklen(*b) / 2)
-// 	{
-// 		while ((*b)->index != i1)
-// 	}
-// 	ft_printf("\n\n\n\n");
-// 	ft_stkprint(*b);
-// 	ft_printf("\n\n\n\n");
-// 	ft_stkprint(*b);
-// }
-
-void    sort_init(t_stack **a, t_stack **b, int d)
+void	sort_init(t_stack **a, t_stack **b, int d)
 {
-	int size;
-	int max;
-	int chunk;
+	int	size;
+	int	max;
+	int	chunk;
 
 	size = ft_stklen(*a);
 	chunk = size / d;
@@ -47,7 +31,7 @@ void    sort_init(t_stack **a, t_stack **b, int d)
 	sort_chunks(a, b);
 }
 
-void    push_chunks(t_stack **a, t_stack **b, int chunk, int max)
+void	push_chunks(t_stack **a, t_stack **b, int chunk, int max)
 {
 	int	i;
 	int	half;
