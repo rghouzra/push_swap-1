@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:39:08 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 12:42:55 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 14:52:41 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ void	sort_chunks(t_stack **a, t_stack **b);
 // sorting.hlpr
 int		find_index(t_stack *stk, int val);
 int		get_dis(t_stack *ptr, int index);
-void	push_top(t_stack **stk, int index, int len);
-void	push_two_top(t_stack **a, t_stack **b, int *index, int i);
+void	push_top(t_stack **stk, int index);
+void	push_two_top(t_stack **a, t_stack **b, int *index);
 #endif
