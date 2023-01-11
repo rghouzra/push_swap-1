@@ -1,6 +1,6 @@
 NAME        := push_swap
 CC        := cc
-FLAGS    := -Wall -Wextra -Werror -I inc -g
+FLAGS    := -Wall -Wextra -Werror -I inc
 
 SRCS        :=      push_swap.c \
                           src/libft/ft_atoi.c \
