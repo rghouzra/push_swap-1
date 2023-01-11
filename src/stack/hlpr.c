@@ -6,18 +6,19 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 13:40:52 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/08 18:36:58 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 12:12:40 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_front(t_stack **head, int val)
+void	push_front(t_stack **head, int val, int index)
 {
 	t_stack *new_node;
 
 	new_node = (t_stack *)malloc(sizeof(t_stack));
 	new_node->value = val;
+	new_node->index = index;
 	new_node->next = *head;
 	*head = new_node;
 }
@@ -31,10 +32,10 @@ void	ft_stkprint(t_stack *head)
 	tmp = head;
 	while (tmp && tmp->next)
 	{
-		ft_printf("value: %d\n", tmp->value);
+		ft_printf("value: %d == index: %d\n", tmp->value, tmp->index);
 		tmp = tmp->next;
 	}
-	ft_printf("value: %d\n", tmp->value);
+	ft_printf("value: %d == index: %d\n", tmp->value, tmp->index);
 }
 
 

@@ -6,41 +6,34 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:14:32 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/10 14:34:08 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 12:44:11 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static	int get_dis(t_stack *ptr, int index)
-{
-	if (index < ft_stklen(ptr) - index)
-		return (index);
-	return (ft_stklen(ptr) - index);
-}
 
-static void	testing(t_stack **b)
-{
-	int len = ft_stklen(*b) - 1;
-	int dis =  get_dis(*b, find_index(*b, len));
-	ft_printf("\n\n\n\n");
-	ft_stkprint(*b);
-	ft_printf("\n\n\n\n");
-	while (dis > 0)
-	{
-		if ()
-		rrb(b, 1);
-		dis--;
-	}
-	ft_stkprint(*b);
-}
+// static void	testing(t_stack **b)
+// {
+// 	int len = ft_stklen(*b) - 1;
+// 	int dis = get_dis(*b, find_index(*b, len));
+// 	int i1 = find_index(*b, 99);
+// 	if (i1 > ft_stklen(*b) / 2)
+// 	{
+// 		while ((*b)->index != i1)
+// 	}
+// 	ft_printf("\n\n\n\n");
+// 	ft_stkprint(*b);
+// 	ft_printf("\n\n\n\n");
+// 	ft_stkprint(*b);
+// }
 
 void    sort_init(t_stack **a, t_stack **b, int d)
 {
 	int size;
 	int max;
 	int chunk;
-	
+
 	size = ft_stklen(*a);
 	chunk = size / d;
 	max = chunk;
@@ -51,7 +44,7 @@ void    sort_init(t_stack **a, t_stack **b, int d)
 			break ;
 		max += chunk;
 	}
-	testing(b);
+	sort_chunks(a, b);
 }
 
 void    push_chunks(t_stack **a, t_stack **b, int chunk, int max)
@@ -61,7 +54,7 @@ void    push_chunks(t_stack **a, t_stack **b, int chunk, int max)
 
 	half = chunk / 2;
 	i = 0;
-	while (i < chunk && *a)
+	while (*a && i < chunk)
 	{
 		if ((*a)->index <= max)
 		{
@@ -79,3 +72,24 @@ void    push_chunks(t_stack **a, t_stack **b, int chunk, int max)
 	}
 }
 
+void	sort_chunks(t_stack **a, t_stack **b)
+{
+	int	index;
+	int	fbig;
+	int	sbig;
+
+	index = ft_stklen(*b);
+	while (index > 0)
+	{
+		index--;
+		fbig = find_index(*b, index);
+		sbig = find_index(*b, index - 1);
+		if (index == 0 || get_dis(*b, fbig) > get_dis(*b, sbig))
+		{
+			push_top(b, index, fbig);
+			pa(a, b);
+		}
+		else
+			push_two_top(a, b, &index, sbig);
+	}
+}

@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:39:08 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/10 14:12:05 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/11 12:42:55 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ typedef struct s_stack
 t_stack	*ft_stklast(t_stack *stk);
 void	ft_stkadd(t_stack **ptr, int new);
 //stack.hlpr
-void	push_front(t_stack **head, int val);
+void	push_front(t_stack **head, int val, int index);
 void	ft_stkprint(t_stack *head);
-int	ft_stklen(t_stack *head);
+int		ft_stklen(t_stack *head);
 //stack.checks
 int		is_sorted(t_stack *stk);
 // ops
@@ -56,7 +56,10 @@ void    sort_four(t_stack **a, t_stack **b);
 void    sort_five(t_stack **a, t_stack **b);
 void    push_chunks(t_stack **a, t_stack **b, int chunk, int max);
 void    sort_init(t_stack **a, t_stack **b, int d);
-void	sort_chunks(t_stack **a,t_stack **b);
+void	sort_chunks(t_stack **a, t_stack **b);
 // sorting.hlpr
 int		find_index(t_stack *stk, int val);
+int		get_dis(t_stack *ptr, int index);
+void	push_top(t_stack **stk, int index, int len);
+void	push_two_top(t_stack **a, t_stack **b, int *index, int i);
 #endif

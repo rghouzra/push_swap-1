@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 12:26:50 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/04 15:08:13 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:11:59 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	pa(t_stack **a, t_stack **b)
 	int	tmp;
 	t_stack *tmp2;
 	
-	if (*b == NULL || *a == NULL)
+	if (*b == NULL)
 		return ;
 	tmp2 = *b;
 	tmp = (*b)->value;
