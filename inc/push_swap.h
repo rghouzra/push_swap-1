@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:39:08 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/15 13:54:05 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/15 14:48:01 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ int					get_dis(t_stack *ptr, int index);
 void				push_top(t_stack **stk, int index);
 void				push_two_top(t_stack **a, t_stack **b, int *index);
 // checker
-void				do_input(t_stack **a, t_stack **b);
+int					do_input(t_stack **a, t_stack **b, char *line);
+void				checker(t_stack **a, t_stack **b);
 #endif

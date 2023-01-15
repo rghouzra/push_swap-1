@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 17:42:47 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/15 14:29:09 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/15 14:49:19 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,38 +15,39 @@
 void	ft_error(void)
 {
 	ft_putstr_fd("Error\n", 2);
+	exit(1);
 }
 
-int	do_inputt(t_stack **a, t_stack **b, char *line)
+int	do_input(t_stack **a, t_stack **b, char *op)
 {
-	if (!ft_strcmp(line, "sa\n"))
+	if (!ft_strcmp(op, "sa\n"))
 		sa(a, 0);
-	else if (!ft_strcmp(line, "sb\n"))
+	else if (!ft_strcmp(op, "sb\n"))
 		sb(b, 0);
-	else if (!ft_strcmp(line, "ss\n"))
+	else if (!ft_strcmp(op, "ss\n"))
 		ss(a, b, 0);
-	else if (!ft_strcmp(line, "pa\n"))
+	else if (!ft_strcmp(op, "pa\n"))
 		pa(a, b, 0);
-	else if (!ft_strcmp(line, "pb\n"))
+	else if (!ft_strcmp(op, "pb\n"))
 		pb(a, b, 0);
-	else if (!ft_strcmp(line, "ra\n"))
+	else if (!ft_strcmp(op, "ra\n"))
 		ra(a, 0);
-	else if (!ft_strcmp(line, "rb\n"))
+	else if (!ft_strcmp(op, "rb\n"))
 		rb(b, 0);
-	else if (!ft_strcmp(line, "rr\n"))
+	else if (!ft_strcmp(op, "rr\n"))
 		rr(a, b, 0);
-	else if (!ft_strcmp(line, "rra\n"))
+	else if (!ft_strcmp(op, "rra\n"))
 		rra(a, 0);
-	else if (!ft_strcmp(line, "rrb\n"))
+	else if (!ft_strcmp(op, "rrb\n"))
 		rrb(b, 0);
-	else if (!ft_strcmp(line, "rrr\n"))
+	else if (!ft_strcmp(op, "rrr\n"))
 		rrr(a, b, 0);
 	else
-		ft_error();
+		return (0);
 	return (1);
 }
 
-void	check(t_stack **a, t_stack **b)
+void	checker(t_stack **a, t_stack **b)
 {
 	char	*op;
 
@@ -55,7 +56,7 @@ void	check(t_stack **a, t_stack **b)
 	{
 		op = get_next_line(0);
 		if (op)
-			if (!do_inputt(a, b, op))
+			if (!do_input(a, b, op))
 				ft_error();
 	}
 	if (is_sorted(*a) && !(*b))
@@ -76,7 +77,7 @@ int	main(int ac, char *av[])
 	{
 		slen = 0;
 		add_stack(&a, av, &slen);
-		check(&a, &b);
+		checker(&a, &b);
 	}
 	return (0);
 }
