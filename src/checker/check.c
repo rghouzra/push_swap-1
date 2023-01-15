@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 17:42:47 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/15 14:22:51 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/15 14:23:02 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ int	do_inputt(t_stack **a, t_stack **b, char *line)
 		rrr(a, b, 0);
 	else
 		ft_error();
-	// ft_stkprint(*a);
 	return (1) ;
 }
 
