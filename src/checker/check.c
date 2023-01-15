@@ -6,25 +6,15 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 17:42:47 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/15 14:23:02 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/15 14:29:09 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_error(void)
+void	ft_error(void)
 {
 	ft_putstr_fd("Error\n", 2);
-}
-
-int ft_strcmp(const char *s1, const char *s2)
-{
-	while (*s1 && *s2 && *s1 == *s2)
-	{
-		s1++;
-		s2++;
-	}
-	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
 
 int	do_inputt(t_stack **a, t_stack **b, char *line)
@@ -53,19 +43,19 @@ int	do_inputt(t_stack **a, t_stack **b, char *line)
 		rrr(a, b, 0);
 	else
 		ft_error();
-	return (1) ;
+	return (1);
 }
 
-static void check(t_stack **a, t_stack **b)
+void	check(t_stack **a, t_stack **b)
 {
-	char *lel;
+	char	*op;
 
-	lel = "kys";
-	while (lel)
+	op = "first";
+	while (op)
 	{
-		lel = get_next_line(0);
-		if (lel)
-			if (!do_inputt(a, b, lel))
+		op = get_next_line(0);
+		if (op)
+			if (!do_inputt(a, b, op))
 				ft_error();
 	}
 	if (is_sorted(*a) && !(*b))

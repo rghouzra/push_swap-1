@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 15:00:23 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/12 12:08:13 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/15 14:29:21 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	add_stack(t_stack **stk, char **args, int *slen)
 	char	**da;
 	int		i;
 	long	num;
-	
+
 	num = 0;
 	i = 0;
 	da = convert_text(args);

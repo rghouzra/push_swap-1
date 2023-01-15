@@ -30,6 +30,7 @@ SRCS        :=      push_swap.c \
 						  src/libft/ft_strlcat.c \
 						  src/libft/ft_strlcpy.c \
 						  src/libft/ft_strlen.c \
+						  src/libft/ft_strcmp.c \
 						  src/libft/ft_strmapi.c \
 						  src/libft/ft_strncmp.c \
 						  src/libft/ft_strnstr.c \
@@ -86,6 +87,7 @@ SRCS_BONUS  :=      src/checker/check.c \
 						  src/libft/ft_strlcpy.c \
 						  src/libft/ft_strlen.c \
 						  src/libft/ft_strmapi.c \
+						  src/libft/ft_strcmp.c \
 						  src/libft/ft_strncmp.c \
 						  src/libft/ft_strnstr.c \
 						  src/libft/ft_strrchr.c \
