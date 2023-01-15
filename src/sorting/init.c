@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 18:49:19 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 16:19:42 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/12 18:21:55 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static void	ft_norm(t_stack **a, t_stack **b, int i)
 {
 	while (i-- > 0)
 		ra(a, 1);
-	pb(a, b);
+	pb(a, b, 1);
 }
 
 void	sort_four(t_stack **a, t_stack **b)
@@ -70,7 +70,7 @@ void	sort_four(t_stack **a, t_stack **b)
 	i = find_index(*a, min);
 	ft_norm(a, b, i);
 	sort_three(a);
-	pa(a, b);
+	pa(a, b, 1);
 	if (!is_sorted(*a))
 		sa(a, 1);
 }
@@ -98,7 +98,7 @@ void	sort_five(t_stack **a, t_stack **b)
 	i = find_index(*a, min);
 	ft_norm(a, b, i);
 	sort_four(a, b);
-	pa(a, b);
+	pa(a, b, 1);
 	if (!is_sorted(*a))
 		sa(a, 1);
 }

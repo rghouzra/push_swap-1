@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 15:00:23 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 16:17:49 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:08:13 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	is_allint(char **av)
 		{
 			if (!ft_isdigit(av[i][j]) && av[i][j] != '-')
 			{
-				ft_printf("Error: Invalid arguments");
+				ft_putstr_fd("Error: Invalid arguments\n", 2);
 				exit(1);
 			}
 			j++;
@@ -61,12 +61,20 @@ void	add_stack(t_stack **stk, char **args, int *slen)
 {
 	char	**da;
 	int		i;
-
+	long	num;
+	
+	num = 0;
 	i = 0;
 	da = convert_text(args);
 	is_allint(da);
 	while (da[i])
 	{
+		num = ft_atoi(da[i]);
+		if (num > 2147483647 || num < -2147483648)
+		{
+			ft_putstr_fd("Error: interger overflow.\n", 2);
+			exit(1);
+		}
 		ft_stkadd(stk, ft_atoi(da[i]));
 		free(da[i]);
 		i++;

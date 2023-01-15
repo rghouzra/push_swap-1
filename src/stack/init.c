@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:24:49 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 16:19:52 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:04:03 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	ft_gibindex(t_stack **stk, t_stack **new)
 			ptr->index++;
 		else if (ptr->value == tmp->value)
 		{
-			ft_printf("Error: Duplicated numbers.\n");
+			ft_putstr_fd("Error: Duplicated numbers.\n", 2);
 			exit(1);
 		}
 		ptr = ptr->next;

@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 12:54:29 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 12:11:06 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/15 13:13:54 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	sb(t_stack **b, int fd)
 		ft_printf("sb\n");
 }
 
-void	pb(t_stack **a, t_stack **b)
+void	pb(t_stack **a, t_stack **b, int fd)
 {
 	int		tmpv;
 	int		tmpi;
@@ -41,7 +41,8 @@ void	pb(t_stack **a, t_stack **b)
 	push_front(b, tmpv, tmpi);
 	*a = (*a)->next;
 	free(tmp2);
-	ft_printf("pb\n");
+	if (fd)
+		ft_printf("pb\n");
 }
 
 void	rb(t_stack **b, int fd)
@@ -65,7 +66,7 @@ void	rrb(t_stack **b, int fd)
 	t_stack	*tmp1;
 	t_stack	*tmp2;
 
-	if (!*b)
+	if (!*b || !(*b)->next)
 		return ;
 	tmp1 = *b;
 	tmp2 = ft_stklast(*b);

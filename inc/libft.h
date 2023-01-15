@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:31:45 by aarbaoui          #+#    #+#             */
-/*   Updated: 2022/12/30 12:15:00 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:05:38 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_atoi(const char *n);
+long	ft_atoi(const char *n);
 void	*ft_memset(void *b, int c, int len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);

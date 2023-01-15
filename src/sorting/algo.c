@@ -6,7 +6,7 @@
 /*   By: aarbaoui <aarbaoui@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:14:32 by aarbaoui          #+#    #+#             */
-/*   Updated: 2023/01/11 16:18:22 by aarbaoui         ###   ########.fr       */
+/*   Updated: 2023/01/12 18:22:02 by aarbaoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,10 @@ void	push_chunks(t_stack **a, t_stack **b, int chunk, int max)
 		if ((*a)->index <= max)
 		{
 			if ((*a)->index <= max - half)
-				pb(a, b);
+				pb(a, b, 1);
 			else
 			{
-				pb(a, b);
+				pb(a, b, 1);
 				rb(b, 1);
 			}
 			i++;
@@ -71,7 +71,7 @@ void	sort_chunks(t_stack **a, t_stack **b)
 		if (index == 0 || get_dis(*b, fbig) < get_dis(*b, sbig))
 		{
 			push_top(b, index);
-			pa(a, b);
+			pa(a, b, 1);
 		}
 		else
 			push_two_top(a, b, &index);
