@@ -1,7 +1,7 @@
 NAME        := push_swap
 CNAME       := checker
 CC        := cc
-FLAGS    := -Wall -Wextra -Werror -I inc -g -fsanitize=address
+FLAGS    := -Wall -Wextra -Werror -I inc
 
 SRCS        :=      push_swap.c \
 						  src/libft/ft_atoi.c \
