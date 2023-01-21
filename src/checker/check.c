@@ -58,6 +58,7 @@ void	checker(t_stack **a, t_stack **b)
 		if (op)
 			if (!do_input(a, b, op))
 				ft_error();
+		free(op);
 	}
 	if (is_sorted(*a) && !(*b))
 		write(1, "OK", 2);
@@ -69,6 +70,7 @@ int	main(int ac, char *av[])
 {
 	t_stack	*a;
 	t_stack	*b;
+	t_stack *tmp;
 	int		slen;
 
 	a = NULL;
@@ -78,6 +80,12 @@ int	main(int ac, char *av[])
 		slen = 0;
 		add_stack(&a, av, &slen);
 		checker(&a, &b);
+		while (a)
+		{
+			tmp = a;
+			a = a->next;
+			free(tmp);
+		}
 	}
 	return (0);
 }
