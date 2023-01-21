@@ -41,6 +41,7 @@ int	main(int ac, char *av[])
 	t_stack	*a;
 	t_stack	*b;
 	int		slen;
+	t_stack *tmp;
 
 	a = NULL;
 	b = NULL;
@@ -51,6 +52,12 @@ int	main(int ac, char *av[])
 		if (is_sorted(a))
 			return (0);
 		do_stack(&a, &b, slen);
+		while(a)
+		{
+			tmp = a;
+			a = a->next;
+			free(a);
+		}
 	}
 	return (0);
 }
