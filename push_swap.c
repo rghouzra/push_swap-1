@@ -56,7 +56,7 @@ int	main(int ac, char *av[])
 		{
 			tmp = a;
 			a = a->next;
-			free(a);
+			free(tmp);
 		}
 	}
 	return (0);
